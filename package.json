@@ -1,0 +1,22 @@
+{
+  "name": "website-generator",
+  "version": "1.0.0",
+  "description": "AI-first full-stack website generator with Next.js frontend and NestJS backend",
+  "scripts": {
+    "dev:frontend": "cd frontend && pnpm dev",
+    "dev:backend": "cd backend && pnpm run start:dev",
+    "dev:all": "concurrently \"pnpm run dev:frontend\" \"pnpm run dev:backend\"",
+    "install:all": "pnpm install && cd frontend && pnpm install && cd ../backend && pnpm install",
+    "build:all": "cd frontend && pnpm build && cd ../backend && pnpm build",
+    "lint:all": "cd frontend && pnpm lint && cd ../backend && pnpm lint",
+    "format:all": "cd frontend && pnpm format && cd ../backend && pnpm format"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}
